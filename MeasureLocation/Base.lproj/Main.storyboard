@@ -30,6 +30,9 @@
                             <constraint firstItem="pJO-bg-asb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dL2-BP-NPt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distanceReading" destination="pJO-bg-asb" id="S3d-ne-eSd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
