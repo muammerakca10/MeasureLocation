@@ -20,6 +20,20 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         view.backgroundColor = .gray
     }
+    
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let status = CLAuthorizationStatus(rawValue: Int32())
+        if status == CLAuthorizationStatus.authorizedAlways {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self){
+                if CLLocationManager.isRangingAvailable(){
+                    //do stuff
+                }
+            }
+        }
+    }
+    
+    /*
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self){
@@ -29,6 +43,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             }
         }
     }
+     */
 
 
 }
